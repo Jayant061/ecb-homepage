@@ -1,0 +1,70 @@
+@import "./variables";
+@import "./a";
+.header {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(
+    to right,
+    $sectionHeaderLeftClr 50%,
+    $sectionHeaderRightClr
+  );
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  #header-text {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex: 1;
+
+    #header-text-child-1 {
+        min-height: 64px;
+        text-align: start;
+      flex: 0.3;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      font-family: Inter;
+      span {
+        font-size: 0.625rem;
+        margin-top: 0.5rem;
+        color: $lightClr;
+      }
+      h6 {
+        margin-top: 2%;
+        font-size: 0.938rem;
+        font-weight: 400;
+        line-height: 1.2rem;
+      }
+    }
+    #header-text-child-2 {
+      border-left: 1px solid $borderLightClr;
+      border-right: 1px solid $borderLightClr;
+      padding-left: 3%;
+      padding-right: 1%;
+      flex: 0.4;
+
+      p {
+        color: white;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+
+        #score {
+          color: #419bc8;
+          // opacity: 0.4;
+        }
+        #wickets{
+        color: #7fa2bc;
+        }
+      }
+    }
+  }
+  #view-match {
+    a {
+      @include anchorTag;
+    }
+  }
+}

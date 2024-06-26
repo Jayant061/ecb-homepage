@@ -1,0 +1,118 @@
+@import "./variables";
+.nav-el {
+  font-family: Inter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  li {
+    width: 100%;
+    cursor: pointer;
+    opacity: 0.5;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: bold;
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 8% 0;
+    padding-left: 10%;
+    gap: 0.8rem;
+    img {
+      width: 0.8rem;
+    }
+    &:hover {
+      background-color: $navHoverBgc;
+      transition: 0.4s ease-out;
+      img {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+  .li-wrapper{
+    width: 100%;
+    height: 100%;
+    .expand{
+        position: fixed;
+        left: 150px;
+        top: 0;
+        width: 0;
+        z-index: 200;
+        background-color: $navAbsPageBgc;
+        overflow: hidden;
+        .expand-child{
+            margin-top: 5%;
+            padding-left: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-self: center;
+            color: white;
+            .heading{
+                text-align: center;
+                font-weight: 700;
+                font-size: 1.2rem;
+                margin-bottom: 10%;
+            }
+            .cols{
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                .col-4{
+                    flex: 25%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    h4{
+                        font-size: 0.9rem;
+                        padding-bottom: 20px;
+                    }
+                    li{
+                        width: fit-content;
+                        list-style-type: none;
+                        padding: 5px;
+                        padding-left: 0;
+                        font-weight: 300;
+                        font-size: 0.75rem;
+                        text-transform: capitalize;
+                        &:hover{
+                            color: #48a8d8;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+  }
+  #matches:hover{
+    #expand-matches{
+        animation: moveRight 0.3s ease-out;
+        width: 70vw;
+        height: 100vh;
+    }
+  }
+  #england:hover{
+    #expand-england{
+        animation: moveRight 0.3s ease-out;
+        width: 70vw;
+        height: 100vh;
+    }
+  }
+}
+@keyframes moveRight {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 35vw;
+  }
+  100% {
+    width: 70vw;
+  }
+}

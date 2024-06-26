@@ -1,0 +1,50 @@
+@mixin buttonStyle{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Inter;
+
+    padding: 10px;
+    font-size: 0.8rem;
+    background-color: $redClr;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px  red;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+}
+a{
+    @include buttonStyle();
+    &:hover{
+        background-color: rgb(240, 0, 0);
+        transition: 0.4s ease;
+    }
+}
+
+@mixin timeDuration{
+    display: inline-flex;
+            width: max-content;
+            justify-content: start;
+            align-items: center;
+            background-color: $redClr;
+            padding: 3px 5px;
+            color: white;
+            gap: 5px;
+            img{
+                width: 0.688rem;
+            }
+            span{
+                font-size: 0.688rem;
+                font-weight: bold;
+            }
+}
+@mixin date{
+    span{
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: #419bc8;
+    }
+}

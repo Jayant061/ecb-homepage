@@ -1,0 +1,21 @@
+@mixin anchorTag{
+    display: flex;
+      align-items: center;
+      gap: 5px;
+      text-transform: uppercase;
+      color: white;
+      text-decoration: none;
+      background-color: $redClr;
+      box-shadow: 0 3px $redBoxShadow;
+      padding: 10px;
+      font-size: 0.8rem;
+      border-radius: 0.25rem;
+      transition: 0.3s ease;
+      &:hover {
+        background-color: #005699;
+        box-shadow: 0 3px #113660;
+      }
+      img {
+        width: 0.9rem;
+      }
+}

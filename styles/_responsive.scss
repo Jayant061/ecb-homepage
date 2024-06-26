@@ -1,0 +1,170 @@
+@import "./variables";
+.container {
+  flex-direction: column;
+  .nav-container {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    box-shadow: 0 2px 10px rgb(0, 32, 70);
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .icon {
+        width: 100px;
+      }
+    }
+    .nav-contents {
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      gap: 5px;
+      a {
+        width: max-content;
+        padding: 0.5rem 1rem;
+        margin: auto 0;
+      }
+      .nav-el {
+        padding-top: 10px;
+        background-color: #005699;
+        box-shadow: 0 -2px 10px rgb(0, 32, 70);
+        position: fixed;
+        top: 49px;
+        left: 0;
+        width: 0%;
+        overflow: hidden;
+        z-index: 500;
+        height: 100%;
+        justify-content: start;
+        align-items: start;
+        li {
+          width: 100%;
+          height: fit-content;
+          padding: 10px 20px;
+          &:not(:last-child) {
+            border-bottom: 1px solid gray;
+          }
+        }
+        .li-wrapper {
+          padding-left: 0;
+          height: fit-content;
+          .expand {
+            position: relative;
+            left: 0;
+            top: 0;
+            display: none;
+            .expand-child {
+                padding: 0;
+              margin: 0;
+              .heading {
+                display: none;
+                margin-bottom: 0;
+              }
+              .cols {
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                .col-4 {
+                  flex: none;
+                  width: 100%;
+                  align-items: start;
+                  justify-content: start;
+                    padding: 10px 20px;
+                  border-bottom: 1px solid gray;
+                  cursor: pointer ;
+                  &:hover{
+                    background-color: midnightblue;
+                  }
+
+                  li {
+                    display: none;
+                  }
+                  h4 {
+                    padding-bottom: 0;
+                    padding: 5px 0;
+                    
+                  }
+                }
+              }
+            }
+          }
+        }
+        #matches:hover {
+          #expand-matches {
+            animation: none;
+            width: 100%;
+            height: fit-content;
+            display: block;
+          }
+        }
+        #england:hover {
+          #expand-england {
+            animation: none;
+            width: 100%;
+            height: fit-content;
+            display: block;
+          }
+        }
+      }
+      .contents-wrapper {
+        height: 100%;
+        .menu-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          padding: 0 0.875rem;
+          height: 100%;
+          background-color: #004880;
+          color: white;
+          text-transform: uppercase;
+          font-family: Inter;
+          font-size: 0.7rem;
+          cursor: pointer;
+
+          #menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.2rem;
+            margin: auto;
+            width: 1rem;
+            height: 1rem;
+            li {
+              width: 1rem;
+              height: 0.2rem;
+              list-style-type: none;
+              background-color: white;
+              transform-origin: 0rem;
+            }
+          }
+        }
+        &:hover {
+          .nav-el {
+            width: 100vw;
+          }
+
+          #mid-row {
+            visibility: hidden;
+          }
+          #first-row {
+            width: 1.4rem;
+            transform: rotate(45deg);
+            transition: transform 0.1s ease;
+            height: 0.1rem;
+          }
+          #last-row {
+            width: 1.4rem;
+            height: 0.1rem;
+            transform: rotate(-45deg);
+            transition: transform 0.1s ease;
+          }
+        }
+      }
+    }
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}

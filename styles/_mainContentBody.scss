@@ -1,0 +1,121 @@
+@import "./a";
+.content-body{
+    height: 120vh;
+    .bg-image{
+        background-image: linear-gradient(rgba(1, 20, 40, 0), #011428 80%), url(http://localhost:5500/images/Englad_Test_Match_Image.png);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+    }
+    .headline{
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        .time-duration{
+            @import "./button";
+            @include timeDuration;
+        }
+        .headline-heading{
+            width: 61%;
+            a{
+                text-align: start;
+                font-size: 2.5rem;
+                color: white;
+                text-decoration: none;
+                font-weight: 700;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .date{
+            @import "./button";
+            @include date
+        }
+        .video-link{
+            display: inline-block;
+            a{
+                @include anchorTag;
+                width: max-content;
+                margin-top: 20px;
+                transition: 0.2s ease;
+            }
+        }
+    }
+    .cards{
+        width: 99%;
+        display: grid;
+        grid-template-columns: 45% 26% 26%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 40%;
+        margin: 2% 0;
+        gap: 1%;
+        overflow: hidden;
+
+        .card{
+            .mobileimg{
+                width: 0;
+            }
+            height: 100%;
+            text-decoration: none;
+            color: white;
+            transition: all 0.4s ease-in-out;
+            overflow: hidden;
+            &:hover{
+                p{
+                    text-decoration: underline;
+                }
+                transform: scale(1.02);
+            }
+            .card-el{
+                padding: 20px;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                gap: 5px;
+                .time-duration{
+                    @import "./button";
+                    @include timeDuration;
+                }
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+                .date{
+                    @import "./button";
+                    @include date;
+                }
+            }
+        }
+        #card-1{
+            .card-el{
+                height: 100%;
+                background-image: linear-gradient(rgba(255,255,255,0) 53%, rgb(0, 47, 82) 80%), url(http://localhost:5500/images/card-1.png);
+                
+            }
+        }
+        #card-2{
+            .card-el{
+                height: 100%;
+                background-image: linear-gradient(rgba(255,255,255,0) 53%, rgb(0, 47, 82) 80%), url(http://localhost:5500/images/card-2.png);
+                span{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+        #card-3{
+            .card-el{
+                height: 100%;
+                background-image: linear-gradient(rgba(255,255,255,0) 53%, rgb(0, 47, 82) 80%), url(http://localhost:5500/images/card-3.png);
+                
+            }
+        }
+    }
+}
