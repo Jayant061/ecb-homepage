@@ -96,6 +96,9 @@
 .container .nav-container .nav-contents .nav-el li img {
   width: 0.8rem;
 }
+.container .nav-container .nav-contents .nav-el li .rightarrowMobile {
+  width: 0;
+}
 .container .nav-container .nav-contents .nav-el li:hover {
   background-color: #00355e;
   transition: 0.4s ease-out;
@@ -558,9 +561,24 @@
     height: -moz-fit-content;
     height: fit-content;
     padding: 10px 20px;
+    color: white;
+    opacity: 1;
+  }
+  .container .nav-container .nav-contents .nav-el li span {
+    flex: 1;
+  }
+  .container .nav-container .nav-contents .nav-el li .rightarrowMobile {
+    width: 0.8rem;
   }
   .container .nav-container .nav-contents .nav-el li:not(:last-child) {
     border-bottom: 1px solid gray;
+  }
+  .container .nav-container .nav-contents .nav-el li:hover {
+    background-color: #00355e;
+    transition: 0.4s ease-out;
+  }
+  .container .nav-container .nav-contents .nav-el li:hover img {
+    mix-blend-mode: normal;
   }
   .container .nav-container .nav-contents .nav-el .li-wrapper {
     padding-left: 0;
