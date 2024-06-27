@@ -151,15 +151,15 @@
           }
           #first-row {
             width: 1.4rem;
-            transform: rotate(45deg);
-            transition: transform 0.1s ease;
+            transform: rotate(50deg);
+            transition: transform 0.2s ease;
             height: 0.1rem;
           }
           #last-row {
             width: 1.4rem;
             height: 0.1rem;
-            transform: rotate(-45deg);
-            transition: transform 0.1s ease;
+            transform: rotate(-50deg);
+            transition: transform 0.2s ease;
           }
         }
       }

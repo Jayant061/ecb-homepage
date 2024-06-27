@@ -78,7 +78,7 @@
                 background-size: cover;
                 display: flex;
                 flex-direction: column;
-                justify-content: start;
+                justify-content: end;
                 gap: 5px;
                 .time-duration{
                     @import "./button";

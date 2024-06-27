@@ -1,6 +1,7 @@
 .container {
   .main-content {
     height: 100%;
+    padding-top: 52px;
     .header {
       padding: 0.5rem;
       #header-text {
@@ -70,6 +71,9 @@
             .mobileimg{
                 transform: scale(1.02);
             }
+          }
+          .card-el{
+            justify-content: start;
           }
         }
         #card-1 .card-el,
