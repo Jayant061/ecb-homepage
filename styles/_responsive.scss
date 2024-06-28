@@ -20,10 +20,11 @@
       align-items: center;
       position: relative;
       gap: 5px;
+      min-height: 52px;
       a {
         width: max-content;
         padding: 0.5rem 1rem;
-        margin: auto 0;
+        margin: auto 2px;
       }
       .nav-el {
         padding-top: 10px;

@@ -535,12 +535,13 @@
     align-items: center;
     position: relative;
     gap: 5px;
+    min-height: 52px;
   }
   .container .nav-container .nav-contents a {
     width: -moz-max-content;
     width: max-content;
     padding: 0.5rem 1rem;
-    margin: auto 0;
+    margin: auto 2px;
   }
   .container .nav-container .nav-contents .nav-el {
     padding-top: 10px;
